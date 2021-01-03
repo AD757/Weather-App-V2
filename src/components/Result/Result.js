@@ -4,14 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCloud,
   faBolt,
+  faCloudSun,
   faCloudRain,
   faCloudShowersHeavy,
   faSnowflake,
   faSun,
   faSmog,
+  faTemperatureLow,
+  faTemperatureHigh,
+  faWind,
 } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
-import device from '../../responsive/Device';
+import device from '../../Responsive/Device';
 import ForecastDetails from '../Forecast/ForecastDetails';
 import ResultFadeIn from './ResultFadeIn';
 import Large from '../Labels/Large';
@@ -58,7 +62,7 @@ const WeatherIcon = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 70px;
-  color: #1b3657;
+  color: #fff;
   @media ${device.tablet} {
     font-size: 100px;
     justify-content: flex-end;
@@ -77,7 +81,7 @@ const Temperature = styled.h3`
   display: block;
   font-size: 50px;
   font-weight: 400;
-  color: #fff;
+  color: #031027;
   @media ${device.tablet} {
     font-size: 70px;
   }
@@ -122,7 +126,7 @@ const Forecast = styled.div`
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  scrollbar-color: lightgray #031027;
+  scrollbar-color: #e1e1e1;
   scrollbar-width: thin;
   margin-top: 20px;
   padding-bottom: 20px;
@@ -199,41 +203,53 @@ const Result = ({ weather }) => {
           <Small align="center" weight="400">
             {Math.floor(highestTemp)}&#176;
           </Small>
-          <Text align="center">Hight</Text>
+          <Text align="center">
+            Highest <FontAwesomeIcon icon={faTemperatureHigh} />
+          </Text>
         </WeatherDetail>
         <WeatherDetail>
           <Small align="center" weight="400">
-            {wind}mph
+            {wind} mph
           </Small>
-          <Text align="center">Wind</Text>
+          <Text align="center">
+            Wind <FontAwesomeIcon icon={faWind} />
+          </Text>
         </WeatherDetail>
         <WeatherDetail>
           <Small align="center" weight="400">
             {sunrise}
           </Small>
-          <Text align="center">Sunrise</Text>
+          <Text align="center">
+            Sunrise <FontAwesomeIcon icon={faSun} />
+          </Text>
         </WeatherDetail>
         <WeatherDetail>
           <Small align="center" weight="400">
             {Math.floor(lowestTemp)}&#176;
           </Small>
-          <Text align="center">Low</Text>
+          <Text align="center">
+            Lowest <FontAwesomeIcon icon={faTemperatureLow} />
+          </Text>
         </WeatherDetail>
         <WeatherDetail>
           <Small align="center" weight="400">
             {humidity}%
           </Small>
-          <Text align="center">Rain</Text>
+          <Text align="center">
+            Precipitation <FontAwesomeIcon icon={faCloudRain} />
+          </Text>
         </WeatherDetail>
         <WeatherDetail>
           <Small align="center" weight="400">
             {sunset}
           </Small>
-          <Text align="center">Sunset</Text>
+          <Text align="center">
+            Sunset <FontAwesomeIcon icon={faCloudSun} />
+          </Text>
         </WeatherDetail>
       </WeatherDetailsWrapper>
       <ForecastWrapper>
-        <Medium>5 Day Forecast</Medium>
+        <Medium>5 day / 3 hour forecast 🌤</Medium>
         <Forecast>{forecasts}</Forecast>
       </ForecastWrapper>
     </Results>

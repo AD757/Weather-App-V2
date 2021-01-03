@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Small from '../Labels/Small';
 import Text from '../Text';
-import device from '../../responsive/Device';
+import device from '../../Responsive/Device';
 
 const ForecastWrapper = styled.div`
   flex-shrink: 0;
@@ -38,7 +38,7 @@ const WeatherIcon = styled.img`
 
 const ForecastDetails = props => {
   const { temp, month, day, hour, icon } = props;
-  const iconUrl = `https://openweathermap.org/img/w/${icon}.png`;
+  const iconUrl = `https://openweathermap.org/img/wn/${icon}.png`;
 
   return (
     <ForecastWrapper>

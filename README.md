@@ -1,6 +1,6 @@
 # React Weather App 🌤
 
-Weather web app built in React and using Open Weather API that showcase current weather and show forecast for upcoming 5 days with 3 hours update.
+Weather web app built in React and using Open Weather API that showcase current weather. You can search weather forecast for 5 days with update every 3 hours by city name.
 
 ## Demo
 

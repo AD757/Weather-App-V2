@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import device from '../../responsive/Device';
+import device from '../../Responsive/Device';
 
 const Medium = styled.h3`
   color: ${({ color }) => color || '#031027'};

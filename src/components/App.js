@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Search from './Search/Search';
-import device from '../responsive/Device';
+import device from '../Responsive/Device';
 import Result from './Result/Result';
 import Error from './Error';
 
@@ -10,10 +10,10 @@ const AppTitle = styled.h1`
   height: 64px;
   margin: 0;
   padding: 20px 0;
-  font-size: 20px;
+  font-size: 14px;
   text-transform: uppercase;
   font-weight: 400;
-  color: #031027;
+  color: #000;
   transition: 0.3s 1.4s;
   font-family: 'Poppins', 'Montserrat', sans-serif;
   opacity: ${({ label }) => (label ? 1 : 0)};
@@ -54,10 +54,9 @@ const AppTitle = styled.h1`
 `;
 
 const WeatherWrapper = styled.div`
-  max-width: 1500px;
+  max-width: 100%;
   margin: 0 auto;
   height: calc(100vh - 64px);
-  width: 100%;
   position: relative;
 `;
 
@@ -77,7 +76,7 @@ class App extends React.Component {
   handleSearch = e => {
     e.preventDefault();
     const { value } = this.state;
-    const API_KEY = 'Your key here';
+    const API_KEY = 'YOUR KEY HERE';
 
     const weather = `https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=${API_KEY}&units=metric`;
     const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&APPID=${API_KEY}&units=metric`;

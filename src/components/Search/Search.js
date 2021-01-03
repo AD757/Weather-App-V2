@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import device from '../../responsive/Device';
+import device from '../../Responsive/Device';
 
 const SearchBar = styled.form`
   top: ${({ result }) => (result ? '0%' : '30%')};
@@ -25,12 +25,12 @@ const SearchInput = styled.input`
   background-color: #fff;
   font-size: 16px;
   padding: 10px 15px 10px 40px;
-  color: #000;
+  color: #031027;
   transition: 0.2s;
   border-radius: 20px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   &:focus {
-    color: #000;
+    color: #031027;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     outline: none;
   }
@@ -69,7 +69,7 @@ const Search = ({ submit, value, change, result }) => {
   return (
     <>
       <SearchBar result={result} onSubmit={submit}>
-        <SearchInput type="text" value={value} placeholder="Enter city" onChange={change} />
+        <SearchInput type="text" value={value} placeholder="Search for a city" onChange={change} />
         <SearchIcon>
           <FontAwesomeIcon icon={faSearch} />
         </SearchIcon>
