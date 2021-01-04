@@ -52,7 +52,7 @@ const SearchIcon = styled.span`
   height: 14px;
   width: 14px;
   font-size: 14px;
-  color: #c5c5c5;
+  color: #1e1e1e;
   @media ${device.tablet} {
     height: 15px;
     width: 15px;

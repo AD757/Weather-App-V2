@@ -249,7 +249,7 @@ const Result = ({ weather }) => {
         </WeatherDetail>
       </WeatherDetailsWrapper>
       <ForecastWrapper>
-        <Medium>5 day / 3 hour forecast 🌤</Medium>
+        <Medium>5 day / 3 Hour Forecast 🌤</Medium>
         <Forecast>{forecasts}</Forecast>
       </ForecastWrapper>
     </Results>

@@ -76,7 +76,7 @@ class App extends React.Component {
   handleSearch = e => {
     e.preventDefault();
     const { value } = this.state;
-    const API_KEY = 'YOUR KEY HERE';
+    const API_KEY = 'Your API key here';
 
     const weather = `https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=${API_KEY}&units=metric`;
     const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&APPID=${API_KEY}&units=metric`;
@@ -133,6 +133,7 @@ class App extends React.Component {
         });
       })
       .catch(error => {
+        // eslint-disable-next-line no-console
         console.log(error);
 
         this.setState({
