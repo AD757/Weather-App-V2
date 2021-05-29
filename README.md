@@ -13,4 +13,4 @@ Weather web app built in React and Styled-Components. Using Open Weather API tha
 
 ### Old Version
 
-- [Link](http://ad-weather-app.surge.sh/)
+- [Link](https://ad-weather-app.surge.sh/)
